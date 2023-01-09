@@ -17,6 +17,11 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	two_arr = malloc(sizeof(int *) * height);
+	if (two_arr == NULL)
+	{
+		free(two_arr);
+		return (NULL);
+	}
 	for (i = 0; i < height; i++)
 	{
 		*(two_arr + i) = malloc(sizeof(int) * width);
