@@ -29,7 +29,7 @@ int **alloc_grid(int width, int height)
 		{
 			for (k = i; k >= 0; k--)
 			{
-				free(*(two_arr + i));
+				free(two_arr[i]);
 			}
 			free(two_arr);
 			return (NULL);
