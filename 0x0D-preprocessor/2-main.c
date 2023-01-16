@@ -8,10 +8,8 @@
  * Return: 0 on success
  */
 
-int main(int argc, char *argv[])
+int main(void)
 {
-	(void)argc;
-	(void)argv;
 	printf("%s\n", __FILE__);
 	return(0);
 }
