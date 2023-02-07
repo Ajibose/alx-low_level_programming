@@ -35,6 +35,12 @@ int create_file(const char *filename, char *text_content)
 	return (1);
 }
 
+/**
+ * _len - count the number of bytes in a string
+ * @s: string to count
+ *
+ * Return: length of string
+ */
 int _len(char *s)
 {
 	int i;
