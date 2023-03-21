@@ -47,3 +47,15 @@ int div(int n1, int n2)
 {
 	return (n1 / n2);
 }
+
+/**
+ * mod - perform a remainder division
+ * @n1: first number
+ * @n2: second number
+ *
+ * Return: remainder of division
+ */
+int mod(int n1, int n2)
+{
+	return (n1 % n2);
+}
