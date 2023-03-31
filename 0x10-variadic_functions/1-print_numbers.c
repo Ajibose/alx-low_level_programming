@@ -9,22 +9,20 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
-	va_list params;
+	unsigned int i, first;
+	va_list ap;
 
-	va_start(params, n);
-	for (i = 0; i < (n - 1) && n != 0; i++)
+	va_start(ap, n);
+	for (i = 0; i < n; i++)
 	{
-		if (!separator)
-			printf("%d", va_arg(params, int));
+		first = va_arg(ap, int);
+		printf("%d", first);
+		if (i < (n - 1))
+		{
+			if (separator)
+				printf("%s", separator);
+		}
 		else
-			printf("%d%s", va_arg(params, int), separator);
+			printf("\n");
 	}
-
-	if (n)
-		printf("%d\n", va_arg(params, int));
-	else
-		printf("\n");
-
-	va_end(params);
 }
