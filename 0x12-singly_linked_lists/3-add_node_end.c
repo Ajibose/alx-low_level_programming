@@ -29,9 +29,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		while (ptr->next != NULL)
-        	{
+		{
 			ptr = ptr->next;
-        	}
+		}
 
 		temp->next = ptr->next;
 		ptr->next = temp;
@@ -49,7 +49,8 @@ list_t *add_node_end(list_t **head, const char *str)
 int _strlen(const char *str)
 {
 	size_t nbytes;
+
 	for (nbytes = 0; str[nbytes] != '\0'; nbytes++)
 		;
-	return nbytes;
+	return (nbytes);
 }
