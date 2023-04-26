@@ -18,7 +18,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(ptr);
 		return (1);
 	}
-		
+
 	else
 	{
 		while (ptr != NULL && count < index - 1)
