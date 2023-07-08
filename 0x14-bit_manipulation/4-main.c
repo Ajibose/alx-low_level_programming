@@ -22,5 +22,8 @@ int main(void)
     n = 2048;
     clear_bit(&n, 11);
     printf("%lu\n", n);
+    n = 2048;
+    clear_bit(&n, 1);
+    printf("%lu\n", n);
     return (0);
 }
