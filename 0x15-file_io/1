@@ -9,29 +9,30 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, sz, ncount;
+	int uniq, nbyte, len;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_APPEND);
-	if (fd == -1)
-		return (-1);
-	if (text_content != NULL)
+	uniq = open(filename, O_WRONLY | O_APPEND);
+	if (uniq == -1)
 	{
-		ncount = _len(text_content);
-		sz = write(fd, text_content, ncount);
-		if (sz == -1)
+		close(uniq);
+		return (-1);
+	}
+
+	if (text_content)
+	{
+		len = _len(text_content);
+		nbyte = write(uniq, text_content, len);
 		{
-			close(fd);
+			close(uniq);
 			return (-1);
 		}
 	}
-
-	close(fd);
+	close(uniq);
 	return (1);
 }
-
 
 /**
  * _len - count the number of byte in a string
