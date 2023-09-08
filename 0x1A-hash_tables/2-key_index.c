@@ -2,6 +2,7 @@
 
 /**
  * key_index - compute the index to store the item in the array
+ * @key: the key of the item
  * @size: Size of the hash table array
  *
  * Return: index to store the key/value pair
