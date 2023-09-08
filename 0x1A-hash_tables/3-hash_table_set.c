@@ -1,5 +1,13 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_set - adds an element to the hash table.
+ * @ht: Address of hash table
+ * @key: the new item key
+ * @value: new item value
+ *
+ * Return: 1 0n success, 0 otherwise
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -41,10 +49,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
-
+/**
+ * create_item - createa new hash table item
+ * @key: new item key
+ * @value: new item value
+ *
+ * Return: Address of new item on success, 0 otherwise
+ */
 hash_node_t *create_item(const char *key, const char *value)
 {
 	hash_node_t *item = malloc(sizeof(hash_node_t));
+
 	if (item == NULL)
 	{
 		free(item);
