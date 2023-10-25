@@ -6,6 +6,3 @@ NAME = school
 
 school: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
-
-main.o: school.o m.h
-school.o: m.h
