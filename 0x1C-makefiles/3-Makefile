@@ -19,4 +19,4 @@ oclean:
 fclean:
 	$(RM) *~ school $(OBJ)
 
-re: oclean all
+re: fclean all
