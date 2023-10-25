@@ -1,0 +1,9 @@
+all: school
+CC = gcc
+SRC = main.c school.c
+
+school: main.o school.o m.h
+	$(CC) main.o school.o m.h -o school
+
+main.o: school.o m.h
+school.o: m.h
